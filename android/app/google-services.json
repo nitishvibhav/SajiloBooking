@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "578445540480",
+    "project_id": "sajilo-booking",
+    "storage_bucket": "sajilo-booking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578445540480:android:92d30b73abf970d2f5fa65",
+        "android_client_info": {
+          "package_name": "com.sajilobooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578445540480-eg9nnk9cgd3nnsnafclprj9mfjtub18c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sajilobooking",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "578445540480-cbo6reqhfgmo63cl6945jd4f478823fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC53xEvosX7pYKQJqyzh9167qcEUHHgeps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578445540480-cbo6reqhfgmo63cl6945jd4f478823fk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

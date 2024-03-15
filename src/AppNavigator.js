@@ -114,7 +114,7 @@ const AppNavigator = () => {
         <Stack.Screen
         name="HolidayPackageSearchPage"
         component={HolidayPackageSearchPage}
-        options={{headerShown: true, title: 'Review Booking'}}
+        options={{headerShown: true, title: "Holiday Packages"}}
       />
       </Stack.Navigator>
     </NavigationContainer>
