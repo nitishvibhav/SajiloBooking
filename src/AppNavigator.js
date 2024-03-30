@@ -19,6 +19,9 @@ import Amenities from './screens/hotel/Amenities';
 import SelectRoom from './screens/hotel/SelectRoom';
 import ReviewHotel from './screens/hotel/ReviewHotel';
 import HolidayPackageSearchPage from './screens/HolidayPackage/HolidayPackageSearchPage';
+import HolidayPackageListPage from './screens/HolidayPackage/HolidayPackageListPage';
+import HolidayPackageDetails from './screens/HolidayPackage/HolidayPackageDetails';
+import Notification from './components/homepage/Notification';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -53,12 +56,12 @@ const AppNavigator = () => {
         <Stack.Screen
           name="Hotel"
           component={Hotel}
-          options={{headerShown: false}}
+          options={{headerShown: true, title:"Hotels & Homestays"}}
         />
         <Stack.Screen
           name="Flight"
           component={Flight}
-          options={{headerShown: false}}
+          options={{headerShown: true, title:'Flight Search'}}
         />
         <Stack.Screen
           name="PriceFlight"
@@ -116,6 +119,21 @@ const AppNavigator = () => {
         component={HolidayPackageSearchPage}
         options={{headerShown: true, title: "Holiday Packages"}}
       />
+      <Stack.Screen
+        name="HolidayPackageListPage"
+        component={HolidayPackageListPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="HolidayPackageDetails"
+        component={HolidayPackageDetails}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+          name="Notification"
+          component={Notification}
+          options={{ headerShown: true, title: "Notification" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

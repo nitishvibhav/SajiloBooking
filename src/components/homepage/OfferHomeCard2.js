@@ -26,7 +26,7 @@ const OfferHomeCard2 = (props, ) => {
         style={{ height: 80, width: 80, borderRadius: 6 }}
       />
       <View>
-        <Text style={{ color: "#5b5b5b", marginLeft: 10 }}>{props.category}</Text>
+        <Text style={{ color: "#5b5b5b", marginLeft: 10 }}>{props.category}</Text>                                                                                                                                                                                                                                            
         <View
           style={{
             flexDirection: "row",

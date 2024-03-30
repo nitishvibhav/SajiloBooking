@@ -13,6 +13,8 @@ import TopCard from '../components/homepage/TopCard';
 import {useNavigation} from '@react-navigation/native';
 import OfferHomeCard2 from '../components/homepage/OfferHomeCard2';
 import HomeTop from '../components/homepage/HomeTop';
+import TravelCard from '../components/holidaypackage/TravelCard';
+import Filter from '../components/flight/Filter';
 
 const HomePage = () => {
   const navigation = useNavigation();
@@ -100,73 +102,86 @@ const HomePage = () => {
         <TopCard
           firstname="Houly"
           secondname="Stays"
-          localImage={require('../../assets/hourlystay2.png')}
+          localImage={require('../../assets/houly_stay.png')}
         />
         <TopCard
           firstname="Holiday"
           secondname="Package"
-          localImage={require('../../assets/luggage5.png')}
+          localImage={require('../../assets/holiday_pakage.png')}
         />
         <TopCard
           firstname="Cab"
           secondname="Booking"
-          localImage={require('../../assets/taxi2.png')}
+          localImage={require('../../assets/car_booking.png')}
         />
         <TopCard
           firstname="Travel"
           secondname="Insurance"
-          localImage={require('../../assets/insurance.png')}
+          localImage={require('../../assets/travel_insurane.png')}
         />
         <TopCard
           firstname="Gift"
           secondname="Cards"
-          localImage={require('../../assets/giftcard.png')}
+          localImage={require('../../assets/gift_card.png')}
         />
         <TopCard
-          firstname="Cab"
-          secondname="Booking"
-          localImage={require('../../assets/taxi2.png')}
+          firstname="Travel"
+          secondname="Insurance"
+          localImage={require('../../assets/travel_insurane.png')}
         />
         <TopCard
-          firstname="Houly"
-          secondname="Stays"
-          localImage={require('../../assets/hourlystay2.png')}
+          firstname="Gift"
+          secondname="Cards"
+          localImage={require('../../assets/gift_card.png')}
         />
       </ScrollView>
-      <View style={styles.container}>
+      <View style={styles.containerOffer}>
         <View style={styles.textContainer}>
           <Text style={styles.textHeader}>Offers For you</Text>
           <View style={styles.rightHeader}>
-            <Text style={styles.textHeaderRight}>View All</Text>
-            <View style={styles.imageView}>
-              <Image
-                style={styles.ImageRight}
-                source={require('../../assets/next.png')}
-              />
-            </View>
+            <Text
+              style={{
+                fontSize: 12,
+                color: '#488bf0',
+                fontWeight: '700',
+                marginRight: 10,
+              }}>
+              View All
+            </Text>
+            <Image
+              style={styles.ImageRight}
+              source={require('../../assets/next.png')}
+            />
           </View>
         </View>
+        <ScrollView
+          horizontal
+          style={{flexDirection: 'row', marginBottom: 10, width: '95%'}}
+          showsHorizontalScrollIndicator={false}>
+          <Filter category="Flight" color="black" />
+          <Filter category="Hotel" color="black" />
+          <Filter category="Holiday Package" color="black" />
+          <Filter category="Offer" color="black" />
+          <Filter category="Cab" color="black" />
+          <Filter category="Cruise" color="black" />
+        </ScrollView>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <OfferHomeCard2
-            category="Hotels"
-            date="April 5, 2024"
-            offerImage={require('../../assets/offerimage4.png')}
+          <Image
+            source={require('../../assets/hotel_banner.png')}
+            style={styles.offerBanner}
           />
-          <OfferHomeCard2
-            category="Flights"
-            date="April 15, 2024"
-            offerImage={require('../../assets/offerimage.jpg')}
+          <Image
+            source={require('../../assets/flight_banner.png')}
+            style={styles.offerBanner}
           />
-          <OfferHomeCard2
-            category="Holiday Package"
-            date="April 8, 2024"
-            offerImage={require('../../assets/offerimage3.jpg')}
+          <Image
+            source={require('../../assets/hotel_banner.png')}
+            style={styles.offerBanner}
           />
-          <OfferHomeCard2
-            category="Hourly stays"
-            date="30 March, 2024"
-            offerImage={require('../../assets/offerimage5.png')}
+          <Image
+            source={require('../../assets/hotel_banner.png')}
+            style={styles.offerBanner}
           />
         </ScrollView>
       </View>
@@ -212,6 +227,40 @@ const HomePage = () => {
           />
         </ScrollView>
       </View>
+
+      <View style={styles.container2}>
+        <View style={styles.textContainer}>
+          <Text style={styles.textHeader}>International Destination</Text>
+        </View>
+
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <TravelCard
+            image={require('../../assets/thailand.jpg')}
+            price="₹ 70,222"
+            destination="Thailand"
+          />
+          <TravelCard
+            image={require('../../assets/singapore.jpg')}
+            price="₹ 60,222"
+            destination="Singapore"
+          />
+          <TravelCard
+            image={require('../../assets/spain.jpg')}
+            price="₹ 50,222"
+            destination="Spain"
+          />
+          <TravelCard
+            image={require('../../assets/mauritius.jpg')}
+            price="₹ 40,222"
+            destination="Mauritius"
+          />
+          <TravelCard
+            image={require('../../assets/bali.jpg')}
+            price="₹ 90,222"
+            destination="Bali"
+          />
+        </ScrollView>
+      </View>
     </ScrollView>
   );
 };
@@ -227,7 +276,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   textHeader: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
   },
@@ -237,10 +286,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   ImageRight: {
-    height: 16,
-    width: 16,
-    tintColor: 'white',
-    alignSelf: 'center',
+    height: 12,
+    width: 12,
+    resizeMode: 'contain',
   },
   rightHeader: {
     flexDirection: 'row',
@@ -262,7 +310,27 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 20,
     shadowColor: 'grey',
-
+    paddingBottom: 10,
+  },
+  container2: {
+    width: '100%',
+    backgroundColor: 'white',
+    alignSelf: 'center',
+    marginTop: 20,
+    shadowColor: 'grey',
+   
+  },
+  offerBanner: {
+    height: 150,
+    width: 350,
+    marginLeft: 10,
+    resizeMode: 'contain',
+    borderRadius: 10,
+  },
+  containerOffer: {
+    width: '100%',
+    alignSelf: 'center',
+    shadowColor: 'grey',
     paddingBottom: 10,
   },
 });

@@ -66,7 +66,7 @@ const Login = () => {
   return (
     <View style={styles.mainContainer}>
       <Image
-        source={require('../../../assets/Login.png')}
+        source={require('../../../assets/login_app.png')}
         style={styles.loginImage}
       />
       <MyAppText style={styles.innerContainer}>Log in to your account</MyAppText>
@@ -84,15 +84,15 @@ const Login = () => {
       />
 
       <View style={styles.innerContainerView}>
-        <Text style={{fontSize: 12, fontFamily:'Quicksand-Bold'}}>Remember me</Text>
+        <Text style={{fontSize: 12, fontFamily:'Quicksand-Bold', color:'#000'}}>Remember me</Text>
         <Pressable onPress={() => navigation.navigate('ForgotPassword')}>
-          <Text style={{fontSize: 12}}>Forgotten Password?</Text>
+          <Text style={{fontSize: 12, color:'#000',fontFamily:'Quicksand-Bold'}}>Forgotten Password?</Text>
         </Pressable>
         
       </View>
-     <CustomButton title="Login" width='95%'/>
+     <CustomButton title="Login" width='90%' onPress={handleLogin}/>
       <View style={styles.orView}>
-        <Text style={{fontFamily:'Quicksand-Bold'}}>OR</Text>
+        <Text style={{fontFamily:'Quicksand-Bold', color:'#000'}}>OR</Text>
       </View>
       <TouchableOpacity style={styles.loginGoogle} onPress={signIn}>
         <View style={styles.loginGoogleView}>
@@ -100,6 +100,7 @@ const Login = () => {
             style={{
               flexDirection: 'row',
               flex: 1,
+              justifyContent:'center'
             }}>
             <Image
               source={require('../../../assets/google.png')}
@@ -129,32 +130,35 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   loginImage: {
-    height: 235,
-    width: 250,
+    height: 300,
+    width: 350,
     resizeMode: 'contain',
     alignSelf: 'center',
-    marginTop: 20,
+    marginTop: 30,
+    marginBottom:10
   },
   innerContainer: {
     width: '90%',
     alignSelf: 'center',
     marginTop: 20,
-    
+    color:'#000',
+
   },
   textinput: {
     width: '90%',
-    backgroundColor: '#ebedf0',
+    backgroundColor: '#eef3ef',
     alignSelf: 'center',
     marginTop: 10,
     borderRadius: 6,
     paddingVertical: 10,
     paddingHorizontal: 20,
     fontFamily:'Quicksand-Regular',
-    color:'black'
+    color:'black',
+  
   },
   textinput2: {
     width: '90%',
-    backgroundColor: '#ebedf0',
+    backgroundColor: '#eef3ef',
     alignSelf: 'center',
     marginTop: 20,
     borderRadius: 6,
@@ -184,8 +188,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#ebedf0',
+    backgroundColor: '#eef3ef',
     paddingVertical: 10,
+   alignItems:'center'
   },
   googleImage: {
     height: 24,
@@ -197,23 +202,29 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     flex: 1,
+    alignItems:'center'
   },
   loginGoogleText: {
     fontSize: 16,
     alignSelf: 'center',
     marginLeft: 20,
+    color:'#000',
+    fontWeight:'600',
+    fontFamily:'Quicksand-Bold'
   },
   dontHaveText: {
     alignSelf: 'center',
     fontSize: 12,
     marginTop: 10,
+    color:'#000'
   },
   signUpText: {
-    color: '#2D4990',
+    color: 'orange',
     textDecorationLine: 'underline',
     fontSize: 12,
     fontFamily:'Quicksand-Bold',
   },
+  
 });
 
 export default Login;

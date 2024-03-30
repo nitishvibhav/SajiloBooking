@@ -41,7 +41,6 @@ const CustomBottomNavigator = () => {
             width: "20%",
             justifyContent: "center",
             alignItems: "center",
-            borderBottomColor: selectedTab == 0 ? "orange" : "null",
             borderBottomWidth: selectedTab == 0 ? 2 : 0,
             
           }}
@@ -72,7 +71,6 @@ const CustomBottomNavigator = () => {
             width: "20%",
             justifyContent: "center",
             alignItems: "center",
-            borderBottomColor: selectedTab == 2 ? "orange" : "null",
             borderBottomWidth: selectedTab == 2 ? 2 : 0,
           }}
           onPress={() => setSelectedTab(2)}
@@ -101,7 +99,6 @@ const CustomBottomNavigator = () => {
             width: "20%",
             justifyContent: "center",
             alignItems: "center",
-            borderBottomColor: selectedTab == 1 ? "orange" : "null",
             borderBottomWidth: selectedTab == 1 ? 2 : 0,
           }}
           onPress={() => setSelectedTab(1)}
@@ -143,7 +140,6 @@ const CustomBottomNavigator = () => {
             width: "20%",
             justifyContent: "center",
             alignItems: "center",
-            borderBottomColor: selectedTab == 3 ? "orange" : "null",
             borderBottomWidth: selectedTab == 3 ? 2 : 0,
           }}
           onPress={() => setSelectedTab(3)}
@@ -160,7 +156,7 @@ const CustomBottomNavigator = () => {
             style={{
               color: selectedTab == 3 ? "orange" : "white",
               fontSize: 12,
-              fontStyle: "italic",
+              fontStyle: "italic", 
             }}
           >
             Need Help
@@ -172,7 +168,6 @@ const CustomBottomNavigator = () => {
             width: "20%",
             justifyContent: "center",
             alignItems: "center",
-            borderBottomColor: selectedTab == 4 ? "orange" : "null",
             borderBottomWidth: selectedTab == 4 ? 2 : 0,
           }}
           onPress={() => setSelectedTab(4)}

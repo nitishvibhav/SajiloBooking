@@ -10,6 +10,7 @@ import {
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
+import SmallCard from '../../components/hotel/SmallCard';
 
 
 const Flight = () => {
@@ -53,56 +54,8 @@ const Flight = () => {
     <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
       <View
         style={{
-          height: 80,
-          width: '100%',
-          backgroundColor: 'white',
-          flexDirection: 'row',
-        }}>
-        <Image
-          source={require('../../images/back.png')}
-          style={{
-            height: 20,
-            width: 20,
-            tintColor: 'black',
-            alignSelf: 'center',
-            marginLeft: 20,
-          }}
-        />
-        <View
-          style={{
-            backgroundColor: 'orange',
-            height: 30,
-            width: 30,
-            borderRadius: 50,
-            alignSelf: 'center',
-            justifyContent: 'center',
-            marginLeft: 10,
-          }}>
-          <Image
-            source={require('../../images/flight.png')}
-            style={{
-              height: 20,
-              width: 20,
-              tintColor: 'black',
-              alignSelf: 'center',
-            }}
-          />
-        </View>
-        <Text
-          style={{
-            fontSize: 26,
-            fontWeight: 700,
-            color: 'black',
-            alignSelf: 'center',
-            marginLeft: 10,
-          }}>
-          Flights
-        </Text>
-      </View>
-      <View
-        style={{
           paddingBottom: 20,
-          width: '95%',
+          width: '100%',
           backgroundColor: 'white',
           marginTop: 10,
           alignSelf: 'center',
@@ -161,33 +114,7 @@ const Flight = () => {
             <Text>MULTICITY</Text>
           </TouchableOpacity>
         </View>
-        <View
-          style={{
-            backgroundColor: '#c1f0dc',
-            width: '95%',
-            borderRadius: 6,
-            flexDirection: 'row',
-            alignItems: 'center',
-            alignSelf: 'center',
-            marginTop: 10,
-            justifyContent: 'space-between',
-            padding: 10,
-          }}>
-          <Image
-            source={require('../../images/discount.png')}
-            style={{
-              height: 20,
-              width: 20,
-              tintColor: '#0a6057',
-              marginRight: 10,
-            }}
-          />
-          <Text style={{color: '#207e70', fontSize: 12, marginRight: 10}}>
-            Get FLAT 13% OFF* on your first flight booking! Use code:
-            WELCOMESAJILO{' '}
-          </Text>
-        </View>
-
+      <SmallCard/>
         <View
           style={{
             height: 30,
@@ -225,13 +152,13 @@ const Flight = () => {
           onPress={() => navigation.navigate('FlightSearch')}>
           <View style={{height: '90%', width: '15%'}}>
             <Image
-              source={require('../../images/departures.png')}
+              source={require('../../../assets/from_icon.png')}
               style={{
                 height: 20,
                 width: 20,
                 alignSelf: 'center',
                 marginTop: 10,
-                tintColor: '#939393',
+               
               }}
             />
           </View>
@@ -267,7 +194,7 @@ const Flight = () => {
           }}>
           <View style={{height: '90%', width: '15%'}}>
             <Image
-              source={require('../../images/landing.png')}
+              source={require('../../../assets/to_icon.png')}
               style={{
                 height: 20,
                 width: 20,
@@ -320,7 +247,7 @@ const Flight = () => {
                 justifyContent: 'center',
               }}>
               <Image
-                source={require('../../images/date.png')}
+                source={require('../../../assets/startingdate_icon.png')}
                 style={{
                   height: 20,
                   width: 20,
@@ -437,13 +364,13 @@ const Flight = () => {
             onPress={() => setModalVisible1(true)}>
             <View style={{height: '90%', width: '15%'}}>
               <Image
-                source={require('../../images/departures.png')}
+                source={require('../../../assets/travelclass_icon.png')}
                 style={{
                   height: 20,
                   width: 20,
                   alignSelf: 'center',
                   marginTop: 10,
-                  tintColor: '#939393',
+                 
                 }}
               />
             </View>

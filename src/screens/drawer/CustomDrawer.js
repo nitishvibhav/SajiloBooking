@@ -1,45 +1,45 @@
-import { View, Text, Image, ScrollView } from "react-native";
-import React from "react";
+import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
+import React from 'react';
 
 const CustomDrawer = () => {
+
+  
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "#fff" }}>
+    <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>
       <View
         style={{
           marginTop: 20,
           marginHorizontal: 10,
-          backgroundColor: "orange",
+          backgroundColor: 'orange',
           borderRadius: 6,
           height: 80,
-          flexDirection: "row",
-        }}
-      >
+          flexDirection: 'row',
+        }}>
         <View
           style={{
-            height: 50,
-            width: 50,
-            backgroundColor: "white",
+            height: 40,
+            width: 40,
+            backgroundColor: 'white',
             borderRadius: 50,
-            alignSelf: "center",
+            alignSelf: 'center',
             marginLeft: 10,
-            justifyContent: "center",
-          }}
-        >
+            justifyContent: 'center',
+          }}>
           <Image
-            source={require("../../../assets/user2.png")}
+            source={require('../../../assets/user2.png')}
             style={{
-              height: 30,
-              width: 30,
-              alignSelf: "center",
-              tintColor: "grey",
+              height: 20,
+              width: 20,
+              alignSelf: 'center',
+              tintColor: 'grey',
             }}
           />
         </View>
-        <View style={{ alignSelf: "center", marginLeft: 10 }}>
-          <Text style={{ color: "white", fontSize: 18, fontWeight: 700 }}>
-            Hi Nitish
+        <View style={{alignSelf: 'center', marginLeft: 10}}>
+          <Text style={{color: 'white', fontSize: 18, fontWeight: 700}}>
+            Hi Sounak
           </Text>
-          <Text style={{ color: "white", fontSize: 12 }}>8420557642</Text>
+          <Text style={{color: 'white', fontSize: 12}}>8617362082</Text>
         </View>
       </View>
       <View
@@ -48,72 +48,49 @@ const CustomDrawer = () => {
           marginHorizontal: 10,
           borderRadius: 6,
           height: 80,
-          flexDirection: "row",
-          borderColor: "#d9d9d9",
+          flexDirection: 'row',
+          borderColor: '#d9d9d9',
           borderWidth: 1,
-          justifyContent: "space-between",
+          justifyContent: 'space-between',
           paddingRight: 10,
-        }}
-      >
+        }}>
         <View
           style={{
-            alignSelf: "center",
-            alignItems: "center",
+            alignSelf: 'center',
+            alignItems: 'center',
             marginLeft: 10,
-          }}
-        >
-          <View
-            style={{
-              height: 50,
-              width: 50,
-              backgroundColor: "#cff1fd",
-              borderRadius: 50,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          ></View>
-          <Text style={{ fontSize: 12 }}>My Account</Text>
+          }}>
+          <Image
+            source={require('../../../assets/my_account.png')}
+            style={{height: 45, width: 45, resizeMode: 'contain'}}
+          />
+          <Text style={{fontSize: 12, color: '#000'}}>My Account</Text>
         </View>
         <View
           style={{
-            alignSelf: "center",
-            justifyContent: "center",
+            alignSelf: 'center',
+            justifyContent: 'center',
             marginLeft: 10,
-            alignItems: "center",
-          }}
-        >
-          <View
-            style={{
-              height: 50,
-              width: 50,
-              backgroundColor: "#cff1fd",
-              borderRadius: 50,
-              alignSelf: "center",
-
-              justifyContent: "center",
-            }}
-          ></View>
-          <Text style={{ fontSize: 12 }}>Support</Text>
+            alignItems: 'center',
+          }}>
+          <Image
+            source={require('../../../assets/support.png')}
+            style={{height: 45, width: 45, resizeMode: 'contain'}}
+          />
+          <Text style={{fontSize: 12, color: '#000'}}>Support</Text>
         </View>
         <View
           style={{
-            alignSelf: "center",
-            justifyContent: "center",
+            alignSelf: 'center',
+            justifyContent: 'center',
             marginLeft: 10,
-            alignItems: "center",
-          }}
-        >
-          <View
-            style={{
-              height: 50,
-              width: 50,
-              backgroundColor: "#cff1fd",
-              borderRadius: 50,
-              alignSelf: "center",
-              justifyContent: "center",
-            }}
-          ></View>
-          <Text style={{ fontSize: 12 }}>Notification</Text>
+            alignItems: 'center',
+          }}>
+          <Image
+            source={require('../../../assets/notivications.png')}
+            style={{height: 45, width: 45, resizeMode: 'contain'}}
+          />
+          <Text style={{fontSize: 12, color: '#000'}}>Notification</Text>
         </View>
       </View>
       <View
@@ -121,64 +98,67 @@ const CustomDrawer = () => {
           marginTop: 20,
           marginHorizontal: 10,
           borderRadius: 6,
-          borderColor: "#d9d9d9",
+          borderColor: '#d9d9d9',
           borderWidth: 1,
           paddingBottom: 10,
-        }}
-      >
-        <Text style={{ marginTop: 10, marginLeft: 10, marginBottom: 10 }}>
+        }}>
+        <Text
+          style={{
+            marginTop: 10,
+            marginLeft: 10,
+            marginBottom: 10,
+            color: '#000',
+          }}>
           My trips
         </Text>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/briefcase.png")}
+              source={require('../../../assets/view_manage_trips.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 24,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
               View/Manage Trips
             </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/love.png")}
+              source={require('../../../assets/wishlist.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 26,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>Wishlist</Text>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
+              Wishlist
+            </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
       </View>
@@ -187,114 +167,117 @@ const CustomDrawer = () => {
           marginTop: 20,
           marginHorizontal: 10,
           borderRadius: 6,
-          borderColor: "#d9d9d9",
+          borderColor: '#d9d9d9',
           borderWidth: 1,
           paddingBottom: 10,
-        }}
-      >
-        <Text style={{ marginTop: 10, marginLeft: 10, marginBottom: 10 }}>
+        }}>
+        <Text
+          style={{
+            marginTop: 10,
+            marginLeft: 10,
+            marginBottom: 10,
+            color: '#000',
+          }}>
           Rewards
         </Text>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/briefcase.png")}
+              source={require('../../../assets/gift_cards.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 24,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>Gift Cards</Text>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
+              Gift Cards
+            </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/love.png")}
+              source={require('../../../assets/rewards.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 24,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>Rewards</Text>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
+              Rewards
+            </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/love.png")}
+              source={require('../../../assets/refer&earn.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 24,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>Refer & Earn</Text>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
+              Refer & Earn
+            </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/love.png")}
+              source={require('../../../assets/holiday_refer_eran.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 24,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
               Holidays Refer & earn
             </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
       </View>
@@ -303,84 +286,88 @@ const CustomDrawer = () => {
           marginTop: 20,
           marginHorizontal: 10,
           borderRadius: 6,
-          borderColor: "#d9d9d9",
+          borderColor: '#d9d9d9',
           borderWidth: 1,
           paddingBottom: 10,
-        }}
-      >
-        <Text style={{ marginTop: 10, marginLeft: 10, marginBottom: 10 }}>
+        }}>
+        <Text
+          style={{
+            marginTop: 10,
+            marginLeft: 10,
+            marginBottom: 10,
+            color: '#000',
+          }}>
           Settings
         </Text>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/briefcase.png")}
+              source={require('../../../assets/language.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 24,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>Language</Text>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
+              Language
+            </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             marginHorizontal: 10,
             marginBottom: 15,
-          }}
-        >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
-              source={require("../../../assets/love.png")}
+              source={require('../../../assets/country_icon.png')}
               style={{
-                height: 20,
-                width: 20,
-                tintColor: "grey",
+                height: 24,
+                width: 24,
                 marginRight: 10,
               }}
             />
-            <Text style={{ fontSize: 12, fontWeight: 600 }}>Country</Text>
+            <Text style={{fontSize: 12, fontWeight: 600, color: '#000'}}>
+              Country
+            </Text>
           </View>
           <Image
-            source={require("../../../assets/next.png")}
-            style={{ height: 20, width: 20, tintColor: "#0379d3" }}
+            source={require('../../../assets/next.png')}
+            style={styles.nextImage}
           />
         </View>
       </View>
       <Text
         style={{
-          alignSelf: "center",
+          alignSelf: 'center',
           marginTop: 20,
           fontSize: 10,
-          color: "#0379d3",
+          color: '#0379d3',
           fontWeight: 600,
-        }}
-      >
-        Rate Us • Privacy Policy{" "}
+        }}>
+        Rate Us • Privacy Policy{' '}
       </Text>
       <Text
         style={{
-          alignSelf: "center",
+          alignSelf: 'center',
           marginBottom: 40,
           fontSize: 12,
           fontWeight: 500,
-        }}
-      >
+          color: '#000',
+        }}>
         App Version 1.0.1
       </Text>
     </ScrollView>
@@ -388,3 +375,14 @@ const CustomDrawer = () => {
 };
 
 export default CustomDrawer;
+
+const styles = StyleSheet.create({
+  nextImage: {
+    height: 12,
+    width: 12,
+    alignSelf: 'center',
+    resizeMode: 'contain',
+  },
+});
+
+

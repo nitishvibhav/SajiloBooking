@@ -1,10 +1,17 @@
 import {View, Image, StyleSheet} from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {TouchableOpacity} from 'react-native';
 
 const Splash = () => {
   const navigation = useNavigation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('MainScreen'); 
+    }, 200); 
+  }, []);
+  
 
   return (
     <View style={styles.container}>

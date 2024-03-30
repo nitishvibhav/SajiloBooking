@@ -204,11 +204,11 @@ const PriceFlight = () => {
           />
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <Filter category="Non-stop only"/>
-          <Filter category="2+ stops"/>
-          <Filter category="1 stops"/>
-          <Filter category="Morning 6:00 to 12:00PM"/>
-          <Filter category="Evening 6:00 to 12:00AM"/>
+          <Filter category="Non-stop only" color="white"/>
+          <Filter category="2+ stops" color="white"/>
+          <Filter category="1 stops" color="white"/>
+          <Filter category="Morning 6:00 to 12:00PM" color="white"/>
+          <Filter category="Evening 6:00 to 12:00AM" color="white"/>
         </ScrollView>
       </View>
     </View>

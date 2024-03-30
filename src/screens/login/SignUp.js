@@ -9,6 +9,7 @@ import {
   import { React, useState } from "react";
   import { useNavigation } from "@react-navigation/native";
   import axios from "axios";
+import CustomButton from "../../components/CustomButton";
   
   const SignUp = () => {
     const navigation = useNavigation();
@@ -38,25 +39,27 @@ import {
     return (
       <View style={{ width: "100%", backgroundColor: "white", height: "100%" }}>
         <Image
-          source={require("../../../assets/Signup.png")}
+          source={require("../../../assets/login_app.png")}
           style={{
-            height: 230,
-            width: 260,
+            height: 330,
+            width: 360,
             resizeMode: "contain",
             alignSelf: "center",
             marginTop: 30,
           }}
         />
-        <Text style={{ marginLeft: 20, marginTop: 20, }}>
+        <View style={{width:'90%', alignSelf:'center'}}>
+        <Text style={{ marginTop: 20,color:'#000' }}>
           Sign Up for SAJILO App
         </Text>
+        </View>
         <TextInput
           value={fullName}
           onChangeText={setFullName}
           placeholder="Enter Full Name"
           style={{
             width: "90%",
-            backgroundColor: "#ebedf0",
+            backgroundColor: "#eef3ef",
             alignSelf: "center",
             marginTop: 10,
             borderRadius: 6,
@@ -70,7 +73,7 @@ import {
           placeholder="Enter Your Email"
           style={{
             width: "90%",
-            backgroundColor: "#ebedf0",
+            backgroundColor: "#eef3ef",
             alignSelf: "center",
             marginTop: 20,
             borderRadius: 6,
@@ -84,7 +87,7 @@ import {
           placeholder="Enter Your Password"
           style={{
             width: "90%",
-            backgroundColor: "#ebedf0",
+            backgroundColor: "#eef3ef",
             alignSelf: "center",
             marginTop: 20,
             borderRadius: 6,
@@ -98,7 +101,7 @@ import {
           placeholder="Confirm Password"
           style={{
             width: "90%",
-            backgroundColor: "#ebedf0",
+            backgroundColor: "#eef3ef",
             alignSelf: "center",
             marginTop: 20,
             borderRadius: 6,
@@ -107,30 +110,7 @@ import {
           }}
         />
   
-        <TouchableOpacity
-          style={{
-            marginTop: 30,
-            width: "90%",
-            borderRadius: 6,
-            paddingVertical: 10,
-            flexDirection: "row",
-            alignSelf: "center",
-            justifyContent: "center",
-            backgroundColor: "#2D4990",
-          }}
-          onPress={handleSignUp}
-        >
-          <Text
-            style={{
-              fontSize: 16,
-              color: "#fefe",
-              alignSelf: "center",
-              fontWeight: "600",
-            }}
-          >
-            Sign Up
-          </Text>
-        </TouchableOpacity>
+        <CustomButton title="Sign Up" width='90%' onPress={handleSignUp}/>
       </View>
     );
   };
