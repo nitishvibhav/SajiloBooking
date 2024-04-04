@@ -10,7 +10,7 @@ import CardHotel from '../../components/hotel/CardHotel';
 const Hotel = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView style={{flex: 1}}>
+    <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
       <View
         style={{
           paddingBottom: 10,
@@ -60,24 +60,27 @@ const Hotel = () => {
           onPress={() => navigation.navigate('HotelList')}
         />
       </View>
-      <View
-        style={{
-          paddingBottom: 10,
-          width: '100%',
-          marginTop: 10,
-          alignSelf: 'center',
-          borderRadius: 6,
-        }}>
-        <Text
-          style={{
-            marginLeft: 10,
-            color: '#000',
-            fontSize: 16,
-            fontWeight: '700',
-          }}>
-          Offers for you
-        </Text>
-        <ScrollView horizontal>
+      <View style={styles.containerOffer}>
+        <View style={styles.textContainer}>
+          <Text style={styles.textHeader}>Offers For You</Text>
+          <View style={styles.rightHeader}>
+            <Text
+              style={{
+                fontSize: 12,
+                color: '#488bf0',
+                fontWeight: '700',
+                marginRight: 10,
+              }}>
+              View All
+            </Text>
+            <Image
+              style={styles.ImageRight}
+              source={require('../../../assets/next2.png')}
+            />
+          </View>
+        </View>
+
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <Image
             source={require('../../../assets/hotel_inside_banner.png')}
             style={styles.offerBanner}
@@ -96,11 +99,32 @@ const Hotel = () => {
           />
         </ScrollView>
       </View>
-      <ScrollView horizontal style={{width: '100%'}}>
-        <CardHotel />
-        <CardHotel />
-        <CardHotel />
+      <View style={styles.containerOffer}>
+      <View style={styles.textContainer}>
+        <Text style={styles.textHeader}>Hotels For You</Text>
+        <View style={styles.rightHeader}>
+          <Text
+            style={{
+              fontSize: 12,
+              color: '#488bf0',
+              fontWeight: '700',
+              marginRight: 10,
+            }}>
+            View All
+          </Text>
+          <Image
+            style={styles.ImageRight}
+            source={require('../../../assets/next2.png')}
+          />
+        </View>
+      </View>
+
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+       <CardHotel/>
+       <CardHotel/>
+       <CardHotel/>
       </ScrollView>
+    </View>
     </ScrollView>
   );
 };
@@ -113,6 +137,72 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     resizeMode: 'contain',
     borderRadius: 10,
+    marginTop: 10,
+  },
+  textContainer: {
+    width: '95%',
+    paddingLeft: 10,
+    marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  textHeader: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#000',
+  },
+  textHeaderRight: {
+    fontSize: 12,
+    color: '#488bf0',
+    fontWeight: '700',
+  },
+  ImageRight: {
+    height: 20,
+    width: 20,
+    alignSelf: 'center',
+  },
+  rightHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  imageView: {
+    height: 16,
+    width: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#488bf0',
+    marginLeft: 10,
+    borderRadius: 10,
+  },
+  container: {
+    width: '100%',
+    alignSelf: 'center',
+    marginTop: 10,
+    shadowColor: 'grey',
+    paddingBottom: 10,
+  },
+  container2: {
+    width: '100%',
+    alignSelf: 'center',
+    marginBottom: 10,
+    shadowColor: 'grey',
+    marginTop: 10,
+  },
+  offerBanner: {
+    height: 150,
+    width: 350,
+    marginLeft: 10,
+    resizeMode: 'contain',
+    borderRadius: 10,
+  },
+  containerOffer: {
+    width: '100%',
+    alignSelf: 'center',
+    shadowColor: 'grey',
+    paddingBottom: 10,
     marginTop: 10,
   },
 });

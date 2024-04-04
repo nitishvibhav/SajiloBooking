@@ -116,7 +116,7 @@ const HotelList = () => {
             paddingLeft: 10,
           }}
         >
-          <ScrollView horizontal>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <HotelFilter category="Sort By" />
             <HotelFilter category="All Filters" />
             <HotelFilter category="Star Rating" />

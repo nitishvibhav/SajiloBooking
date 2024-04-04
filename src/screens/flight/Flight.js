@@ -6,12 +6,14 @@ import {
   ScrollView,
   Modal,
   Pressable,
+  StyleSheet,
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
 import SmallCard from '../../components/hotel/SmallCard';
-
+import CustomTouchableOpacity from '../../components/CustomTouchableOpacity';
+import CustomButton from '../../components/CustomButton';
 
 const Flight = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -54,7 +56,7 @@ const Flight = () => {
     <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
       <View
         style={{
-          paddingBottom: 20,
+          paddingBottom: 10,
           width: '100%',
           backgroundColor: 'white',
           marginTop: 10,
@@ -114,26 +116,26 @@ const Flight = () => {
             <Text>MULTICITY</Text>
           </TouchableOpacity>
         </View>
-      <SmallCard/>
+        <SmallCard />
         <View
           style={{
-            height: 30,
-            width: 20,
+            height: 36,
+            width: 36,
             borderWidth: 1,
             borderColor: '#eaeaea',
             backgroundColor: 'white',
             position: 'absolute',
-            top: 175,
+            top: 172,
             alignSelf: 'flex-end',
             right: 20,
             zIndex: 1,
-            borderRadius: 2,
+            borderRadius: 6,
             justifyContent: 'center',
             alignItems: 'center',
           }}>
           <Image
             source={require('../../images/updown.png')}
-            style={{height: 15, width: 15, tintColor: '#2d84cb'}}
+            style={{height: 24, width: 24, tintColor: '#2d84cb'}}
           />
         </View>
         <TouchableOpacity
@@ -147,32 +149,44 @@ const Flight = () => {
             borderWidth: 1,
             borderColor: '#dadada',
             alignItems: 'center',
-            backgroundColor: '#f7f7f7',
+            backgroundColor: '#eef3ef',
+            padding: 10,
           }}
           onPress={() => navigation.navigate('FlightSearch')}>
-          <View style={{height: '90%', width: '15%'}}>
+          <View>
             <Image
               source={require('../../../assets/from_icon.png')}
               style={{
-                height: 20,
-                width: 20,
+                height: 18,
+                width: 18,
                 alignSelf: 'center',
-                marginTop: 10,
-               
+                marginRight: 10,
               }}
             />
           </View>
           <View>
-            <Text style={{color: 'grey', fontSize: 12, fontWeight: 500}}>
+            <Text
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                marginRight: 5,
+                color: '#7b7d7a',
+                fontFamily: 'Quicksand-Bold',
+              }}>
               FROM
             </Text>
             <View style={{flexDirection: 'row', alignItems: 'flex-end'}}>
-              <Text style={{fontSize: 18, fontWeight: 700, marginRight: 5}}>
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: 700,
+                  marginRight: 5,
+                  color: '#000',
+                }}>
                 New Delhi
               </Text>
               <Text style={{fontSize: 14, color: '#5b5b5b'}}>DEL</Text>
             </View>
-
             <Text style={{fontSize: 12, color: 'grey'}}>
               Indira Gandhi International Airport
             </Text>
@@ -190,27 +204,40 @@ const Flight = () => {
             borderWidth: 1,
             borderColor: '#dadada',
             alignItems: 'center',
-            backgroundColor: '#f7f7f7',
+            backgroundColor: '#eef3ef',
+            padding: 10,
           }}>
-          <View style={{height: '90%', width: '15%'}}>
+          <View>
             <Image
               source={require('../../../assets/to_icon.png')}
               style={{
-                height: 20,
-                width: 20,
+                height: 18,
+                width: 18,
                 alignSelf: 'center',
-                marginTop: 10,
-                tintColor: '#939393',
+                marginRight: 10,
               }}
             />
           </View>
 
           <View>
-            <Text style={{color: 'grey', fontSize: 12, fontWeight: 500}}>
+            <Text
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                marginRight: 5,
+                color: '#7b7d7a',
+                fontFamily: 'Quicksand-Bold',
+              }}>
               To
             </Text>
             <View style={{flexDirection: 'row', alignItems: 'flex-end'}}>
-              <Text style={{fontSize: 18, fontWeight: 700, marginRight: 5}}>
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: 700,
+                  marginRight: 5,
+                  color: '#000',
+                }}>
                 Mumbai
               </Text>
               <Text style={{fontSize: 14, color: '#5b5b5b'}}>BOM</Text>
@@ -227,80 +254,18 @@ const Flight = () => {
             alignSelf: 'center',
             width: '95%',
           }}>
-          <TouchableOpacity
-            style={{
-              height: 45,
-              width: '49%',
-              flexDirection: 'row',
-              alignSelf: 'center',
-              marginTop: 10,
-              borderRadius: 10,
-              borderWidth: 1,
-              borderColor: '#dadada',
-              alignItems: 'center',
-              backgroundColor: '#f7f7f7',
-            }}>
-            <View
-              style={{
-                width: 35,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Image
-                source={require('../../../assets/startingdate_icon.png')}
-                style={{
-                  height: 20,
-                  width: 20,
-                  alignSelf: 'center',
-                  tintColor: '#939393',
-                }}
-              />
-            </View>
-            <View
-              style={{
-                marginRight: 10,
-                justifyContent: 'center',
-                marginLeft: 10,
-              }}>
-              <Text style={{color: 'grey', fontSize: 12, fontWeight: 500}}>
-                DEPARTURE DATE
-              </Text>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <Text style={{fontSize: 16, fontWeight: 700, marginRight: 5}}>
-                  8 Feb
-                </Text>
-                <Text style={{fontSize: 12, color: 'grey'}}>Thu, 2024</Text>
-              </View>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              height: 45,
-              width: '49%',
-              marginTop: 10,
-              borderRadius: 10,
-              borderWidth: 1,
-              borderColor: '#dadada',
-              backgroundColor: '#f7f7f7',
-              justifyContent: 'center',
-            }}>
-            <View
-              style={{
-                alignSelf: 'center',
-                justifyContent: 'space-between',
-                height: '90%',
-              }}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate('MyDatePicker')}>
-                <Text style={{color: 'grey', fontSize: 12, fontWeight: 500}}>
-                  +ADD RETURN DATE
-                </Text>
-                <Text style={{fontSize: 12, color: 'grey', marginBottom: 5}}>
-                  Save more on round trips!
-                </Text>
-              </TouchableOpacity>
-            </View>
-          </TouchableOpacity>
+          <CustomTouchableOpacity
+            width="49%"
+            text="DEPARTURE DATE"
+            text2="8 Feb, 2024, Thu "
+            icon={require('../../../assets/checkin_icon.png')}
+          />
+          <CustomTouchableOpacity
+            width="49%"
+            text="RETURN DATE"
+            text2="Add Return Date"
+            icon={require('../../../assets/checkout_icon.png')}
+          />
         </View>
         <View
           style={{
@@ -309,102 +274,65 @@ const Flight = () => {
             alignSelf: 'center',
             width: '95%',
           }}>
-          <TouchableOpacity
-            style={{
-              height: 45,
-              width: '49%',
-              flexDirection: 'row',
-              marginTop: 10,
-              borderRadius: 10,
-              borderWidth: 1,
-              borderColor: '#dadada',
-              alignItems: 'center',
-              backgroundColor: '#f7f7f7',
-            }}
-            onPress={() => setModalVisible(true)}>
-            <View style={{height: '90%', width: '15%'}}>
-              <Image
-                source={require('../../images/user.png')}
-                style={{
-                  height: 20,
-                  width: 20,
-                  alignSelf: 'center',
-                  marginTop: 10,
-                  tintColor: '#939393',
-                  marginLeft: 10,
-                }}
-              />
-            </View>
-            <View style={{marginLeft: 10}}>
-              <Text style={{color: 'grey', fontSize: 12, fontWeight: 500}}>
-                TRAVELLERS
-              </Text>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{fontSize: 14, fontWeight: 600}}>
-                  {adultCount} Adult, {childrenCount} Children
-                </Text>
-              </View>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              height: 45,
-              width: '49%',
-              flexDirection: 'row',
-              alignSelf: 'center',
-              marginTop: 10,
-              borderRadius: 10,
-              borderWidth: 1,
-              borderColor: '#dadada',
-              alignItems: 'center',
-              backgroundColor: '#f7f7f7',
-              paddingLeft: 10,
-              paddingRight: 10,
-            }}
-            onPress={() => setModalVisible1(true)}>
-            <View style={{height: '90%', width: '15%'}}>
-              <Image
-                source={require('../../../assets/travelclass_icon.png')}
-                style={{
-                  height: 20,
-                  width: 20,
-                  alignSelf: 'center',
-                  marginTop: 10,
-                 
-                }}
-              />
-            </View>
-            <View style={{marginLeft: 10}}>
-              <Text style={{color: 'grey', fontSize: 12, fontWeight: 500}}>
-                TRAVEL CLASS
-              </Text>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{fontSize: 14, fontWeight: 600}}>Economy</Text>
-              </View>
-            </View>
-          </TouchableOpacity>
+          <CustomTouchableOpacity
+            width="49%"
+            text="TRAVELLER"
+            text2={`${adultCount} Adult, ${childrenCount} Child`}
+            icon={require('../../../assets/checkout_icon.png')}
+            onPress={() => setModalVisible(true)}
+          />
+          <CustomTouchableOpacity
+            width="49%"
+            text="TRAVELLER CLASS"
+            text2="Economy"
+            icon={require('../../../assets/travelclass_icon.png')}
+            onPress={() => setModalVisible1(true)}
+          />
         </View>
-        <TouchableOpacity
-          style={{
-            height: 40,
-            width: '95%',
-            backgroundColor: 'orange',
-            marginTop: 20,
-            borderRadius: 6,
-            alignSelf: 'center',
-          }}
-          onPress={() => navigation.navigate('PriceFlight')}>
-          <Text
-            style={{
-              color: 'white',
-              textAlign: 'center',
-              marginTop: 5,
-              fontSize: 20,
-              fontWeight: 700,
-            }}>
-            Search
-          </Text>
-        </TouchableOpacity>
+        <CustomButton
+          width="95%"
+          title="search"
+          onPress={() => navigation.navigate('PriceFlight')}
+        />
+      </View>
+      <View style={styles.containerOffer}>
+        <View style={styles.textContainer}>
+          <Text style={styles.textHeader}>Offers For You</Text>
+          <View style={styles.rightHeader}>
+            <Text
+              style={{
+                fontSize: 12,
+                color: '#488bf0',
+                fontWeight: '700',
+                marginRight: 10,
+              }}>
+              View All
+            </Text>
+            <Image
+              style={styles.ImageRight}
+              source={require('../../../assets/next2.png')}
+            />
+          </View>
+        </View>
+
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <Image
+            source={require('../../../assets/flight_inside_banner.png')}
+            style={styles.offerBanner}
+          />
+          <Image
+            source={require('../../../assets/flight_banner.png')}
+            style={styles.offerBanner}
+          />
+          <Image
+            source={require('../../../assets/flight_inside_banner.png')}
+            style={styles.offerBanner}
+          />
+          <Image
+            source={require('../../../assets/hotel_inside_banner.png')}
+            style={styles.offerBanner}
+          />
+        </ScrollView>
       </View>
       <Modal
         animationType="none"
@@ -740,3 +668,79 @@ const Flight = () => {
 };
 
 export default Flight;
+const styles = StyleSheet.create({
+  offerBanner: {
+    height: 150,
+    width: 350,
+    marginLeft: 10,
+    resizeMode: 'contain',
+    borderRadius: 10,
+    marginTop: 10,
+  },
+  textContainer: {
+    width: '95%',
+    paddingLeft: 10,
+    marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  textHeader: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#000',
+  },
+  textHeaderRight: {
+    fontSize: 12,
+    color: '#488bf0',
+    fontWeight: '700',
+  },
+  ImageRight: {
+    height: 20,
+    width: 20,
+    alignSelf: 'center',
+  },
+  rightHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  imageView: {
+    height: 16,
+    width: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#488bf0',
+    marginLeft: 10,
+    borderRadius: 10,
+  },
+  container: {
+    width: '100%',
+    alignSelf: 'center',
+    marginTop: 10,
+    shadowColor: 'grey',
+    paddingBottom: 10,
+  },
+  container2: {
+    width: '100%',
+    alignSelf: 'center',
+    marginBottom: 10,
+    shadowColor: 'grey',
+    marginTop: 10,
+  },
+  offerBanner: {
+    height: 150,
+    width: 350,
+    marginLeft: 10,
+    resizeMode: 'contain',
+    borderRadius: 10,
+  },
+  containerOffer: {
+    width: '100%',
+    alignSelf: 'center',
+    shadowColor: 'grey',
+    paddingBottom: 10,
+    marginTop: 10,
+  },
+});

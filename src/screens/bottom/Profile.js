@@ -323,7 +323,7 @@ const Profile = () => {
         style={{
           backgroundColor: "white",
           marginTop: 20,
-          marginBottom: 60,
+         marginBottom:20,
           flexDirection: "row",
           padding: 20,
           alignItems: "center",

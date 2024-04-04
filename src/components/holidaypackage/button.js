@@ -2,7 +2,7 @@ import {View, Text, Button, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
-const CustomButton = ({title, onPress, width}) => {
+const Button1 = ({title, onPress, width}) => {
   return (
     <LinearGradient
       start={{x: 0, y: 0}}
@@ -18,12 +18,10 @@ const CustomButton = ({title, onPress, width}) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
     paddingVertical: 8,
     flexDirection: 'row',
     alignSelf: 'center',
     justifyContent: 'center',
-    borderColor: 'white',
     borderWidth: 1,
     borderRadius: 6,
   },
@@ -37,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CustomButton;
+export default Button1;

@@ -246,7 +246,7 @@ const HolidayPackageSearchPage = () => {
       <View style={styles.container}>
         <Text style={styles.textHeader}>International Destinations</Text>
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{marginVertical:10}}>
         <TravelCard
           image={require('../../../assets/thailand.jpg')}
           price="₹ 70,222"

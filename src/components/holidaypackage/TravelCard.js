@@ -4,7 +4,7 @@ import React from 'react';
 const TravelCard = ({image, price, destination}) => {
   return (
     <View>
-      <View style={{marginLeft: 10, width: 150, marginVertical: 10}}>
+      <View style={{marginLeft: 10, width: 150, marginVertical: 0}}>
         <Image
           source={image}
           style={{height: 150, width: 150, borderRadius: 10}}
@@ -28,13 +28,14 @@ const TravelCard = ({image, price, destination}) => {
         style={{
           position: 'absolute',
           backgroundColor: '#ffefce',
-          paddingHorizontal: 10,
+          paddingHorizontal: 8,
           marginTop: 15,
           marginLeft: 8,
           borderRadius:4,
-          paddingVertical:5
+          paddingVertical:4,
+          alignItems:'center'
         }}>
-        <Text style={{color: '#000', fontSize: 16, fontWeight: '700'}}>
+        <Text style={{color: '#000', fontSize: 14, fontWeight: '700', alignSelf:'center'}}>
           {destination}
         </Text>
       </View>

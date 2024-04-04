@@ -28,7 +28,7 @@ const HomePage = () => {
             top: 0,
             position: 'absolute',
             width: '100%',
-            height: 130,
+            height: 120,
             borderBottomRightRadius: 20,
             borderBottomLeftRadius: 20,
           }}>
@@ -97,7 +97,7 @@ const HomePage = () => {
 
       <ScrollView
         horizontal
-        style={{height: 90, width: '100%'}}
+        style={{ width: '100%'}}
         showsHorizontalScrollIndicator={false}>
         <TopCard
           firstname="Houly"
@@ -137,7 +137,7 @@ const HomePage = () => {
       </ScrollView>
       <View style={styles.containerOffer}>
         <View style={styles.textContainer}>
-          <Text style={styles.textHeader}>Offers For you</Text>
+          <Text style={styles.textHeader}>Offers For You</Text>
           <View style={styles.rightHeader}>
             <Text
               style={{
@@ -150,21 +150,10 @@ const HomePage = () => {
             </Text>
             <Image
               style={styles.ImageRight}
-              source={require('../../assets/next.png')}
+              source={require('../../assets/next2.png')}
             />
           </View>
         </View>
-        <ScrollView
-          horizontal
-          style={{flexDirection: 'row', marginBottom: 10, width: '95%'}}
-          showsHorizontalScrollIndicator={false}>
-          <Filter category="Flight" color="black" />
-          <Filter category="Hotel" color="black" />
-          <Filter category="Holiday Package" color="black" />
-          <Filter category="Offer" color="black" />
-          <Filter category="Cab" color="black" />
-          <Filter category="Cruise" color="black" />
-        </ScrollView>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <Image
@@ -189,13 +178,19 @@ const HomePage = () => {
         <View style={styles.textContainer}>
           <Text style={styles.textHeader}>Popular Destination</Text>
           <View style={styles.rightHeader}>
-            <Text style={styles.textHeaderRight}>View All</Text>
-            <View style={styles.imageView}>
-              <Image
-                style={styles.ImageRight}
-                source={require('../../assets/next.png')}
-              />
-            </View>
+            <Text
+              style={{
+                fontSize: 12,
+                color: '#488bf0',
+                fontWeight: '700',
+                marginRight: 10,
+              }}>
+              View All
+            </Text>
+            <Image
+              style={styles.ImageRight}
+              source={require('../../assets/next2.png')}
+            />
           </View>
         </View>
 
@@ -231,6 +226,21 @@ const HomePage = () => {
       <View style={styles.container2}>
         <View style={styles.textContainer}>
           <Text style={styles.textHeader}>International Destination</Text>
+          <View style={styles.rightHeader}>
+            <Text
+              style={{
+                fontSize: 12,
+                color: '#488bf0',
+                fontWeight: '700',
+                marginRight: 10,
+              }}>
+              View All
+            </Text>
+            <Image
+              style={styles.ImageRight}
+              source={require('../../assets/next2.png')}
+            />
+          </View>
         </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -268,7 +278,7 @@ const HomePage = () => {
 const styles = StyleSheet.create({
   textContainer: {
     width: '95%',
-    paddingHorizontal: 10,
+    paddingLeft: 10,
     marginTop: 10,
     flexDirection: 'row',
     alignItems: 'center',
@@ -286,9 +296,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   ImageRight: {
-    height: 12,
-    width: 12,
-    resizeMode: 'contain',
+    height: 20,
+    width: 20,
+    alignSelf: 'center',
   },
   rightHeader: {
     flexDirection: 'row',
@@ -306,19 +316,17 @@ const styles = StyleSheet.create({
   },
   container: {
     width: '100%',
-    backgroundColor: 'white',
     alignSelf: 'center',
-    marginTop: 20,
+    marginTop: 10,
     shadowColor: 'grey',
     paddingBottom: 10,
   },
   container2: {
     width: '100%',
-    backgroundColor: 'white',
     alignSelf: 'center',
-    marginTop: 20,
+    marginBottom: 10,
     shadowColor: 'grey',
-   
+    marginTop:10
   },
   offerBanner: {
     height: 150,
@@ -332,6 +340,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     shadowColor: 'grey',
     paddingBottom: 10,
+    marginTop:10
   },
 });
 

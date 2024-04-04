@@ -43,7 +43,7 @@ const CustomTouchableOpacity = ({onPress, icon, text, text2, width}) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 4,
+    
     flexDirection: 'row',
     alignSelf: 'center',
     marginTop: 10,

@@ -7,11 +7,11 @@ const CardHotel = () => {
   return (
     <TouchableOpacity
       style={{
-        width: 220,
+        width: 240,
         borderRadius: 6,
         backgroundColor: 'white',
         marginLeft: 10,
-        marginTop: 10,
+        marginTop: 0,
         elevation: 5,
         shadowColor: 'grey',
         marginBottom: 10,

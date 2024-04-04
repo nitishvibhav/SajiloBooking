@@ -1,10 +1,20 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  Modal,
+  Pressable,
+  TextInput,
+} from 'react-native';
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
+import {useState} from 'react';
 
-
-const ListCard = () => {
-  const navigation = useNavigation()
+const ListCard = ({onPress}) => {
+  const navigation = useNavigation();
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <TouchableOpacity
       style={{
@@ -16,7 +26,7 @@ const ListCard = () => {
         elevation: 5,
         shadowColor: 'grey',
       }}
-      onPress={()=>navigation.navigate("HolidayPackageDetails")}>
+      onPress={() => setModalVisible(true)}>
       <Image
         style={{
           height: 200,
@@ -28,7 +38,13 @@ const ListCard = () => {
       />
       <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
         <Text
-          style={{color: '#000000', marginTop: 10, fontSize: 20, fontWeight: 700, marginLeft:10}}>
+          style={{
+            color: '#000000',
+            marginTop: 10,
+            fontSize: 20,
+            fontWeight: 700,
+            marginLeft: 10,
+          }}>
           Holiday Package to Goa
         </Text>
         <View
@@ -42,7 +58,7 @@ const ListCard = () => {
             justifyContent: 'center',
             paddingHorizontal: 5,
             marginRight: 20,
-            height:24
+            height: 24,
           }}>
           <Text style={{color: '#295886'}}>4N/5D</Text>
         </View>
@@ -253,10 +269,136 @@ const ListCard = () => {
           Get Extra ₹5,757 OFF. Use CODE: GOASALE
         </Text>
       </View>
+      <Modal
+        animationType="none"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}>
+        <View style={{backgroundColor: 'rgba(0,0,0,0.5)', flex: 1}}>
+          <View
+            style={{
+              width: '100%',
+              backgroundColor: '#ffffff',
+              bottom: 0,
+              position: 'absolute',
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 10,
+            }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginLeft: 10,
+                marginTop: 20,
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{
+                  marginLeft: 10,
+                  fontSize: 18,
+                  fontWeight: 700,
+                  color: '#000',
+                }}>
+                Amazing Goa Flight Amazing Deal 3N
+              </Text>
+              <Pressable
+                style={{
+                  borderRadius: 50,
+                  height: 18,
+                  width: 18,
+                  marginRight: 20,
+                  backgroundColor: '#b5b5b5',
+                }}
+                onPress={() => setModalVisible(!modalVisible)}>
+                <Image
+                  source={require('../../images/reject.png')}
+                  style={{
+                    height: 18,
+                    width: 18,
+                    tintColor: 'white',
+                    alignSelf: 'center',
+                  }}
+                />
+              </Pressable>
+            </View>
+            <TouchableOpacity
+              style={styles.container}
+              onPress={() => navigation.navigate('HolidayPackageDetails')}>
+              <View style={styles.textView}>
+                <Text style={styles.textstart}>Starting from - Goa</Text>
+                <Text style={styles.textstart2}>₹ 11,173</Text>
+              </View>
+              <View style={styles.textView}>
+                <Text style={styles.textHeading}>Without Flight</Text>
+                <View style={{alignSelf: 'flex-end', marginTop: 5}}>
+                  <Text style={[styles.textHeading]}>₹ 7,172</Text>
+                  <Text style={styles.subheader}>per person</Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.container2}
+              onPress={() => navigation.navigate('HolidayPackageDetails')}>
+              <View style={styles.textView}>
+                <Text style={styles.textstart}>Starting from - New Delhi</Text>
+                <Text style={styles.textstart2}>₹ 32,522</Text>
+              </View>
+              <View style={styles.textView}>
+                <Text style={styles.textHeading}>With Flight</Text>
+                <View style={{alignSelf: 'flex-end', marginTop: 5}}>
+                  <Text style={[styles.textHeading]}>₹ 20,340</Text>
+                  <Text style={styles.subheader}>per person</Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </TouchableOpacity>
   );
 };
 
 export default ListCard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  textView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  textHeading: {
+    fontSize: 18,
+    color: '#000',
+    fontWeight: '600',
+  },
+  container: {
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#dcdcdc',
+    margin: 10,
+    padding: 10,
+    marginTop: 30,
+    paddingHorizontal: 20,
+  },
+  subheader: {
+    fontSize: 12,
+    color: '#727272',
+    alignSelf: 'flex-end',
+  },
+  textstart: {color: '#727272'},
+  textstart2: {
+    textDecorationLine: 'line-through',
+    color: '#727272',
+  },
+  container2: {
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#dcdcdc',
+    margin: 10,
+    padding: 10,
+    paddingHorizontal: 20,
+    marginBottom: 20,
+  },
+});
