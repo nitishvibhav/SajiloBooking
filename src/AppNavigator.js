@@ -22,6 +22,7 @@ import HolidayPackageSearchPage from './screens/HolidayPackage/HolidayPackageSea
 import HolidayPackageListPage from './screens/HolidayPackage/HolidayPackageListPage';
 import HolidayPackageDetails from './screens/HolidayPackage/HolidayPackageDetails';
 import Notification from './components/homepage/Notification';
+import ReviewPage from './screens/HolidayPackage/ReviewPage';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -133,6 +134,11 @@ const AppNavigator = () => {
           name="Notification"
           component={Notification}
           options={{ headerShown: true, title: "Notification" }}
+        />
+        <Stack.Screen
+          name="ReviewPage"
+          component={ReviewPage}
+          options={{ headerShown: true, title: "Review Page" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

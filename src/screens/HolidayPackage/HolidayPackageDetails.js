@@ -7,15 +7,19 @@ import {
   ScrollView,
 } from 'react-native';
 import React from 'react';
-import Button1 from '../../components/holidaypackage/button';
+import Button from '../../components/holidaypackage/Button';
 import Filter from '../../components/holidaypackage/Filter';
 import DateWithPrice from '../../components/flight/DateWithPrice';
 import LinearGradient from 'react-native-linear-gradient';
 import DayWiseDetails from '../../components/holidaypackage/DayWiseDetails';
 import DayWisePlanDetails from '../../components/holidaypackage/DayWisePlanDetails';
 import DayWisePlanFlightArrival from '../../components/holidaypackage/DayWisePlanFlightArrival';
+import Meals from '../../components/holidaypackage/Meals';
+import DayWisePlanFlightDeparture from '../../components/holidaypackage/DayWisePlanFlightDeparture';
+import { useNavigation } from '@react-navigation/native';
 
 const HolidayPackageDetails = () => {
+  const navigation = useNavigation()
   return (
     <View style={{flex: 1}}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -23,8 +27,7 @@ const HolidayPackageDetails = () => {
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
-            margin: 10,
-            marginHorizontal: 20,
+            margin: 20,
           }}>
           <Image
             source={require('../../../assets/back.png')}
@@ -51,7 +54,7 @@ const HolidayPackageDetails = () => {
               resizeMode: 'stretch',
               borderRadius: 10,
             }}
-            source={require('../../../assets/holidaypackage2.jpg')}
+            source={require('../../../assets/northgoa.jpeg')}
           />
           <View
             style={{
@@ -82,7 +85,7 @@ const HolidayPackageDetails = () => {
                   resizeMode: 'stretch',
                   borderRadius: 10,
                 }}
-                source={require('../../../assets/holidaypackage2.jpg')}
+                source={require('../../../assets/southgoa.jpg')}
               />
               <Image
                 style={{
@@ -91,7 +94,7 @@ const HolidayPackageDetails = () => {
                   resizeMode: 'stretch',
                   borderRadius: 10,
                 }}
-                source={require('../../../assets/holidaypackage2.jpg')}
+                source={require('../../../assets/dolphintrip.jpeg')}
               />
             </View>
           </View>
@@ -251,6 +254,10 @@ const HolidayPackageDetails = () => {
                 <Text style={styles.dayText}>SAT</Text>
                 <Text style={styles.dayCount}>4</Text>
               </View>
+              <View style={styles.plancontainer}>
+                <Text style={styles.dayText}>SUN</Text>
+                <Text style={styles.dayCount}>5</Text>
+              </View>
             </ScrollView>
           </View>
         </View>
@@ -258,20 +265,40 @@ const HolidayPackageDetails = () => {
         <DayWisePlanFlightArrival />
         <DayWiseDetails Day="Day 2" Activity=" Hotel • 2Activities • Meals" />
         <DayWisePlanDetails
-          Activity1="Activity in Goa 9 Hours"
-          Activit1Heading="North Goa Sightseeing (Private Tranfers)"
-          Activity1Subheading="Tour Fort Aguada, Chapora Fort and Popular Beaches such as
+          Activity="Activity in Goa 9 Hours"
+          ActivitHeading="North Goa Sightseeing (Private Tranfers)"
+          ActivitySubheading="Tour Fort Aguada, Chapora Fort and Popular Beaches such as
         Candolim, Calanguta, Baga, Anjuna & Vagator."
-          Activity1icon={require('../../../assets/goa.jpg')}
+          Activityicon={require('../../../assets/northgoa.jpeg')}
         />
+        <DayWisePlanDetails
+          Activity="Activity in Goa 1 Hours"
+          ActivitHeading="Dolphin Trip"
+          ActivitySubheading="Tour Fort Aguada, Chapora Fort and Popular Beaches such as
+        Candolim, Calanguta, Baga, Anjuna & Vagator."
+          Activityicon={require('../../../assets/dolphintrip.jpeg')}
+        />
+        <Meals />
         <DayWiseDetails Day="Day 3" Activity=" Hotel • 1Activities • Meals" />
         <DayWisePlanDetails
-          Activity1="Activity in Goa 9 Hours"
-          Activit1Heading="North Goa Sightseeing (Private Tranfers)"
-          Activity1Subheading="Tour Fort Aguada, Chapora Fort and Popular Beaches such as
+          Activity="Activity in Goa 9 Hours"
+          ActivitHeading="South Goa Sightseeing (Private Tranfers)"
+          ActivitySubheading="Tour Fort Aguada, Chapora Fort and Popular Beaches such as
       Candolim, Calanguta, Baga, Anjuna & Vagator."
-          Activity1icon={require('../../../assets/goa.jpg')}
+          Activityicon={require('../../../assets/southgoa.jpg')}
         />
+        <Meals/>
+        <DayWiseDetails Day="Day 4" Activity=" Hotel • 1Activities • Meals" />
+        <DayWisePlanDetails
+          Activity="Activity in Goa 1.5 Hours"
+          ActivitHeading="Discover Sailing Goa One Boat Experience"
+          ActivitySubheading="Tour Fort Aguada, Chapora Fort and Popular Beaches such as
+      Candolim, Calanguta, Baga, Anjuna & Vagator."
+          Activityicon={require('../../../assets/sailinggoa.jpeg')}
+        />
+        <Meals/>
+        <DayWiseDetails Day="Day 5" Activity=" Hotel • Transfer • Flight" />
+        <DayWisePlanFlightDeparture/>
       </ScrollView>
       <View
         style={{
@@ -292,7 +319,7 @@ const HolidayPackageDetails = () => {
           <Text style={{color: '#8b8b8b', fontSize: 12}}>per person</Text>
         </View>
         <View>
-          <Button1 title="Book Now" width="80%" />
+          <Button title="Book Now" width="80%" onPress={()=>navigation. navigate('ReviewPage')}/>
         </View>
       </View>
     </View>

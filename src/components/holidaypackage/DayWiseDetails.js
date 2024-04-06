@@ -11,6 +11,7 @@ const DayWiseDetails = ({Day,Activity}) => {
             flexDirection: 'row',
             borderBottomEndRadius: 50,
             borderTopEndRadius: 50,
+            marginBottom:20
           }}>
           <View
             style={{

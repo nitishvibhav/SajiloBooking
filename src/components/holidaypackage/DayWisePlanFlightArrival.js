@@ -6,7 +6,6 @@ const DayWisePlanFlightArrival = () => {
   return (
     <View
       style={{
-        marginTop: 20,
         backgroundColor: 'white',
         width: '100%',
         borderBottomWidth: 1,

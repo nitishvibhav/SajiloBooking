@@ -125,14 +125,8 @@ const HomePage = () => {
           localImage={require('../../assets/gift_card.png')}
         />
         <TopCard
-          firstname="Travel"
-          secondname="Insurance"
+          firstname="Trekking"
           localImage={require('../../assets/travel_insurane.png')}
-        />
-        <TopCard
-          firstname="Gift"
-          secondname="Cards"
-          localImage={require('../../assets/gift_card.png')}
         />
       </ScrollView>
       <View style={styles.containerOffer}>

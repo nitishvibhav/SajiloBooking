@@ -1,8 +1,8 @@
-import {View, Text, Button, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Button1 = ({title, onPress, width}) => {
+const Button = ({title, onPress, width}) => {
   return (
     <LinearGradient
       start={{x: 0, y: 0}}
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Button1;
+export default Button;
