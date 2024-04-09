@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from 'react-native';
 import React from 'react';
-import Button from '../../components/holidaypackage/Button';
+import Button from '../../components/holidaypackage/CustomButton';
 import Filter from '../../components/holidaypackage/Filter';
 import DateWithPrice from '../../components/flight/DateWithPrice';
 import LinearGradient from 'react-native-linear-gradient';
@@ -17,6 +17,7 @@ import DayWisePlanFlightArrival from '../../components/holidaypackage/DayWisePla
 import Meals from '../../components/holidaypackage/Meals';
 import DayWisePlanFlightDeparture from '../../components/holidaypackage/DayWisePlanFlightDeparture';
 import { useNavigation } from '@react-navigation/native';
+import CustomButton from '../../components/holidaypackage/CustomButton';
 
 const HolidayPackageDetails = () => {
   const navigation = useNavigation()
@@ -319,7 +320,7 @@ const HolidayPackageDetails = () => {
           <Text style={{color: '#8b8b8b', fontSize: 12}}>per person</Text>
         </View>
         <View>
-          <Button title="Book Now" width="80%" onPress={()=>navigation. navigate('ReviewPage')}/>
+          <CustomButton title="Book Now" width="80%" onPress={()=>navigation. navigate('ReviewPage')}/>
         </View>
       </View>
     </View>

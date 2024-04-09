@@ -23,6 +23,9 @@ import HolidayPackageListPage from './screens/HolidayPackage/HolidayPackageListP
 import HolidayPackageDetails from './screens/HolidayPackage/HolidayPackageDetails';
 import Notification from './components/homepage/Notification';
 import ReviewPage from './screens/HolidayPackage/ReviewPage';
+import TrekkingSearch from './screens/trekking/TrekkingSearch';
+import TrekkingListPage from './screens/trekking/TrekkingListPage';
+import TrekkingDetailsPage from './screens/trekking/TrekkingDetailsPage';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -140,6 +143,21 @@ const AppNavigator = () => {
           component={ReviewPage}
           options={{ headerShown: true, title: "Review Page" }}
         />
+        <Stack.Screen
+        name="TrekkingSearch"
+        component={TrekkingSearch}
+        options={{ headerShown: true, title: "Trekking Search"}}
+      />
+      <Stack.Screen
+      name="TrekkingListPage"
+      component={TrekkingListPage}
+      options={{ headerShown: true, title: "Trekking For You"}}
+    />
+    <Stack.Screen
+      name="TrekkingDetailsPage"
+      component={TrekkingDetailsPage}
+      options={{ headerShown: true, title: "Trekking Details"}}
+    />
       </Stack.Navigator>
     </NavigationContainer>
   );

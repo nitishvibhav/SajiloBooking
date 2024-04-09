@@ -1,7 +1,7 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 
-const TopCard = ({firstname, secondname, localImage}) => {
+const TopCard = ({firstname, secondname, localImage, onPress}) => {
   return (
     <View
       style={{
@@ -14,7 +14,7 @@ const TopCard = ({firstname, secondname, localImage}) => {
         paddingLeft: 45,
         alignItems: 'center',
       }}>
-      <TouchableOpacity style={{alignItems: 'center'}}>
+      <TouchableOpacity style={{alignItems: 'center'}} onPress={onPress}>
         <Image source={localImage} style={{height: 40, width: 40}} />
         <View style={{marginTop: 5, alignItems: 'center'}}>
           <Text style={{fontSize: 10, fontWeight: 600, color: '#000'}}>

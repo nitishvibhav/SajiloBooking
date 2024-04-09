@@ -1,11 +1,12 @@
-import {StyleSheet, Text, View, Image, Button} from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 import React from 'react';
 import TravellerDetails from '../../components/holidaypackage/TravellerDetails';
-import CustomButton from '../../components/CustomButton';
+import CustomButton from '../../components/holidaypackage/CustomButton';
 
 const ReviewPage = () => {
   return (
-    <View>
+    <View style={{flex:1}}>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.mainContainer}>
         <Text style={styles.textHeading}>
           Amazing Goa Flight Inclusive Deal 3N
@@ -99,7 +100,9 @@ const ReviewPage = () => {
           <Text style={{color: '#2baeff'}}>Terms of Service</Text> of Sajilo
         </Text>
       </View>
-      <View
+      
+    </ScrollView>
+    <View
         style={{
           bottom: 0,
           position: 'absolute',
@@ -121,7 +124,7 @@ const ReviewPage = () => {
           <CustomButton title="Book Now" width="80%" />
         </View>
       </View>
-    </View>
+      </View>
   );
 };
 

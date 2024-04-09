@@ -97,12 +97,17 @@ const HomePage = () => {
 
       <ScrollView
         horizontal
-        style={{ width: '100%'}}
+        style={{width: '100%'}}
         showsHorizontalScrollIndicator={false}>
         <TopCard
           firstname="Houly"
           secondname="Stays"
           localImage={require('../../assets/houly_stay.png')}
+        />
+        <TopCard
+          firstname="Trekking"
+          localImage={require('../../assets/trekking.png')}
+          onPress={() => navigation.navigate('TrekkingSearch')}
         />
         <TopCard
           firstname="Holiday"
@@ -123,10 +128,6 @@ const HomePage = () => {
           firstname="Gift"
           secondname="Cards"
           localImage={require('../../assets/gift_card.png')}
-        />
-        <TopCard
-          firstname="Trekking"
-          localImage={require('../../assets/travel_insurane.png')}
         />
       </ScrollView>
       <View style={styles.containerOffer}>
@@ -320,7 +321,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginBottom: 10,
     shadowColor: 'grey',
-    marginTop:10
+    marginTop: 10,
   },
   offerBanner: {
     height: 150,
@@ -334,7 +335,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     shadowColor: 'grey',
     paddingBottom: 10,
-    marginTop:10
+    marginTop: 10,
   },
 });
 
