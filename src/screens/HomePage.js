@@ -113,11 +113,13 @@ const HomePage = () => {
           firstname="Holiday"
           secondname="Package"
           localImage={require('../../assets/holiday_pakage.png')}
+          onPress={() => navigation.navigate('HolidayPackageSearchPage')}
         />
         <TopCard
           firstname="Cab"
           secondname="Booking"
           localImage={require('../../assets/car_booking.png')}
+          onPress={() => navigation.navigate('CabSearch')}
         />
         <TopCard
           firstname="Travel"

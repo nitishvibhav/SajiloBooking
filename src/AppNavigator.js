@@ -26,6 +26,9 @@ import ReviewPage from './screens/HolidayPackage/ReviewPage';
 import TrekkingSearch from './screens/trekking/TrekkingSearch';
 import TrekkingListPage from './screens/trekking/TrekkingListPage';
 import TrekkingDetailsPage from './screens/trekking/TrekkingDetailsPage';
+import TrekkingReviewPage from './screens/trekking/TrekkingReviewPage';
+import CabSearch from './screens/cab/CabSearch';
+import CabCalendar from './components/cab/CabCalendar';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -157,6 +160,21 @@ const AppNavigator = () => {
       name="TrekkingDetailsPage"
       component={TrekkingDetailsPage}
       options={{ headerShown: true, title: "Trekking Details"}}
+    />
+    <Stack.Screen
+      name="TrekkingReviewPage"
+      component={TrekkingReviewPage}
+      options={{ headerShown: true, title: "Review Page"}}
+    />
+    <Stack.Screen
+      name="CabSearch"
+      component={CabSearch}
+      options={{ headerShown: true, title: "Airport Cabs"}}
+    />
+    <Stack.Screen
+      name="CabCalendar"
+      component={CabCalendar}
+      options={{ headerShown: true, title: "Select Date"}}
     />
       </Stack.Navigator>
     </NavigationContainer>

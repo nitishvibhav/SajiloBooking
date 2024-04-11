@@ -3,9 +3,13 @@ import React from 'react';
 import TrekkingCard from '../../components/trekking/TrekkingCard';
 import TrekkingCardCostExcludes from '../../components/trekking/TrekkingCardCostExcludes';
 import CustomItinerary from '../../components/trekking/CustomItinerary';
+import CustomButton from '../../components/holidaypackage/CustomButton';
+import {useNavigation} from '@react-navigation/native'
 
 const TrekkingDetailsPage = () => {
+  const navigation = useNavigation()
   return (
+    <View style={{flex:1}}>
     <ScrollView>
       <View
         style={{
@@ -100,6 +104,29 @@ const TrekkingDetailsPage = () => {
       <CustomItinerary day="Day 17 - Pokhara to Kathmandu by flight"/>
       <CustomItinerary day="Day 18 - Departure"/>
     </ScrollView>
+    <View
+    style={{
+      bottom: 0,
+      position: 'absolute',
+      width: '100%',
+      backgroundColor: 'black',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingLeft: 10,
+      paddingVertical:5
+    }}>
+    <View>
+      <Text style={{color: '#fff', fontSize: 18, fontWeight: '700'}}>
+        ₹ 58,836
+      </Text>
+      <Text style={{color: '#8b8b8b', fontSize: 12}}>per person</Text>
+    </View>
+    <View>
+      <CustomButton title="Book Now" width="80%" onPress={()=>navigation. navigate('TrekkingReviewPage')}/>
+    </View>
+  </View>
+  </View>
   );
 };
 
