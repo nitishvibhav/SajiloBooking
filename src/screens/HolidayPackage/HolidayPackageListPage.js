@@ -8,7 +8,7 @@ const HolidayPackageListPage = () => {
   return (
     
       <View style={{backgroundColor: '#fff', paddingBottom: 20}}>
-        <HolidayPackageListHeader />
+        <HolidayPackageListHeader TripName="New Delhi To Goa" dateTime="7 May 2024, Tuesday | 2 Adult"/>
         <ScrollView
           horizontal
           style={{marginTop: 20}}

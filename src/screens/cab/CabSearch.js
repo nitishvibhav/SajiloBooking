@@ -109,7 +109,7 @@ const CabSearch = () => {
       />
       <DateTimePickerModal
         isVisible={isDatePickerVisible}
-        mode="date"
+        mode="time"
         onConfirm={handleConfirm}
         onCancel={hideDatePicker}
       />
@@ -121,7 +121,7 @@ const CabSearch = () => {
         onPress={showDatePicker}
       />
       
-      <CustomButton title="Explore Cabs" width="95%" />
+      <CustomButton title="Explore Cabs" width="95%" onPress={()=>navigation.navigate('CabList')}/>
     </View>
   );
 };

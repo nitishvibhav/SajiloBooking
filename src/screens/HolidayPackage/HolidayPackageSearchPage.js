@@ -62,7 +62,7 @@ const HolidayPackageSearchPage = () => {
           <CustomTouchableOpacity
             icon={require('../../images/date.png')}
             text="STARTING DATE"
-            text2="12 Apr 2024, friday"
+            text2="12 Apr 2024, Fri"
             width="49%"
           />
           <CustomTouchableOpacity

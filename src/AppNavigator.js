@@ -29,6 +29,8 @@ import TrekkingDetailsPage from './screens/trekking/TrekkingDetailsPage';
 import TrekkingReviewPage from './screens/trekking/TrekkingReviewPage';
 import CabSearch from './screens/cab/CabSearch';
 import CabCalendar from './components/cab/CabCalendar';
+import CabList from './screens/cab/CabList';
+import ReviewCab from './screens/cab/ReviewCab';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -63,12 +65,12 @@ const AppNavigator = () => {
         <Stack.Screen
           name="Hotel"
           component={Hotel}
-          options={{headerShown: true, title:"Hotels & Homestays"}}
+          options={{headerShown: true, title: 'Hotels & Homestays'}}
         />
         <Stack.Screen
           name="Flight"
           component={Flight}
-          options={{headerShown: true, title:'Flight Search'}}
+          options={{headerShown: true, title: 'Flight Search'}}
         />
         <Stack.Screen
           name="PriceFlight"
@@ -122,60 +124,70 @@ const AppNavigator = () => {
           options={{headerShown: true, title: 'Review Booking'}}
         />
         <Stack.Screen
-        name="HolidayPackageSearchPage"
-        component={HolidayPackageSearchPage}
-        options={{headerShown: true, title: "Holiday Packages"}}
-      />
-      <Stack.Screen
-        name="HolidayPackageListPage"
-        component={HolidayPackageListPage}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="HolidayPackageDetails"
-        component={HolidayPackageDetails}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
+          name="HolidayPackageSearchPage"
+          component={HolidayPackageSearchPage}
+          options={{headerShown: true, title: 'Holiday Packages'}}
+        />
+        <Stack.Screen
+          name="HolidayPackageListPage"
+          component={HolidayPackageListPage}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="HolidayPackageDetails"
+          component={HolidayPackageDetails}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
           name="Notification"
           component={Notification}
-          options={{ headerShown: true, title: "Notification" }}
+          options={{headerShown: true, title: 'Notification'}}
         />
         <Stack.Screen
           name="ReviewPage"
           component={ReviewPage}
-          options={{ headerShown: true, title: "Review Page" }}
+          options={{headerShown: true, title: 'Review Page'}}
         />
         <Stack.Screen
-        name="TrekkingSearch"
-        component={TrekkingSearch}
-        options={{ headerShown: true, title: "Trekking Search"}}
-      />
-      <Stack.Screen
-      name="TrekkingListPage"
-      component={TrekkingListPage}
-      options={{ headerShown: true, title: "Trekking For You"}}
-    />
-    <Stack.Screen
-      name="TrekkingDetailsPage"
-      component={TrekkingDetailsPage}
-      options={{ headerShown: true, title: "Trekking Details"}}
-    />
-    <Stack.Screen
-      name="TrekkingReviewPage"
-      component={TrekkingReviewPage}
-      options={{ headerShown: true, title: "Review Page"}}
-    />
-    <Stack.Screen
-      name="CabSearch"
-      component={CabSearch}
-      options={{ headerShown: true, title: "Airport Cabs"}}
-    />
-    <Stack.Screen
-      name="CabCalendar"
-      component={CabCalendar}
-      options={{ headerShown: true, title: "Select Date"}}
-    />
+          name="TrekkingSearch"
+          component={TrekkingSearch}
+          options={{headerShown: true, title: 'Trekking Search'}}
+        />
+        <Stack.Screen
+          name="TrekkingListPage"
+          component={TrekkingListPage}
+          options={{headerShown: true, title: 'Trekking For You'}}
+        />
+        <Stack.Screen
+          name="TrekkingDetailsPage"
+          component={TrekkingDetailsPage}
+          options={{headerShown: true, title: 'Trekking Details'}}
+        />
+        <Stack.Screen
+          name="TrekkingReviewPage"
+          component={TrekkingReviewPage}
+          options={{headerShown: true, title: 'Review Page'}}
+        />
+        <Stack.Screen
+          name="CabSearch"
+          component={CabSearch}
+          options={{headerShown: true, title: 'Airport Cabs'}}
+        />
+        <Stack.Screen
+          name="CabCalendar"
+          component={CabCalendar}
+          options={{headerShown: true, title: 'Select Date'}}
+        />
+        <Stack.Screen
+          name="CabList"
+          component={CabList}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ReviewCab"
+          component={ReviewCab}
+          options={{headerShown: true, title: 'Contact & Pickup Details'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

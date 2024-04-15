@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-const HolidayPackageListHeader = () => {
+const HolidayPackageListHeader = ({TripName,dateTime}) => {
   return (
     <View
       style={{
@@ -27,9 +27,9 @@ const HolidayPackageListHeader = () => {
           </TouchableOpacity>
         </View>
         <View style={{alignSelf: 'center', marginRight: 10}}>
-          <Text style={{fontSize: 16, fontWeight: 700, color:'#000'}}>New Delhi To Goa</Text>
+          <Text style={{fontSize: 16, fontWeight: 700, color:'#000'}}>{TripName}</Text>
           <Text style={{fontSize: 12, color: '#404040', marginTop:5}}>
-            7 May 2024, Tuesday | 2 Adult
+            {dateTime}
           </Text>
         </View>
       </View>
